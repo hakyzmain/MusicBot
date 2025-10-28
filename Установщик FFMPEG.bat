@@ -1,5 +1,6 @@
 @echo off
 color 08
+title by hakyz
 chcp 65001 <nul
 echo Установка FFmpeg...
 mkdir C:\ffmpeg 2>nul
@@ -8,4 +9,5 @@ powershell -Command "Expand-Archive -Path '%TEMP%\ffmpeg.zip' -DestinationPath '
 xcopy "%TEMP%\ffmpeg_temp\ffmpeg-master-latest-win64-gpl\*" "C:\ffmpeg" /E /I /Y
 setx PATH "%PATH%;C:\ffmpeg\bin"
 echo Успех
+
 pause
